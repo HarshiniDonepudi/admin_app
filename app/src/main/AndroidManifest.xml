@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.admin_app">
+    package="com.example.admin_app" >
 
     <application
         android:allowBackup="true"
@@ -8,15 +8,45 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Admin_app">
+        android:theme="@style/Theme.Admin_app" >
+        <activity
+            android:name=".MedicinesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DiagnosisActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VaccineActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReportsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PatientProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PatientActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DandPActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/Theme.noAction.Admin_app"
+            android:exported="true" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false" >
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
