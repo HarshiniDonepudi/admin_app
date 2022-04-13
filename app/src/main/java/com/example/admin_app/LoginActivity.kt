@@ -1,12 +1,11 @@
 package com.example.admin_app
 
-import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.example.admin_app.databinding.ActivityLoginBinding
-import com.example.admin_app.databinding.ActivityPatientProfileBinding
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.database.FirebaseDatabase
+
 
 class LoginActivity : AppCompatActivity() {
 
@@ -16,6 +15,10 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 //        binding = ActivityLoginBinding.inflate(layoutInflater)
 //        val view = binding.root
+    val database = FirebaseDatabase.getInstance()
+    val myRef = database.getReference("message")
+
+    myRef.setValue("Hello, World!")
         val login : Button=findViewById(R.id.btnlogin)
         login.setOnClickListener{
             val intent = Intent(this, DandPActivity::class.java)

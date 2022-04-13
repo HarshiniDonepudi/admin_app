@@ -1,7 +1,7 @@
 package com.example.admin_app
 
 data class Helper(
-    var id: Int,
+    var id: String,
     var name:String,
     var spec: String,
     var about:String,
